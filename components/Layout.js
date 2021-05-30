@@ -1,4 +1,3 @@
-import Nav from '../components/Nav'
 
 const Layout = ({ children }) => {
     return (
