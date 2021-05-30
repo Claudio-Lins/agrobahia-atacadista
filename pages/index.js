@@ -12,7 +12,7 @@ export default function Home() {
 
       <main className=''>
         <h1 className='minhaClass'>
-          Welcome to Next.js!
+          AbgoBahia Atacadista!
         </h1>
 
         
