@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import SlideDestaque from "../components/home/destaque/SlideDestaque";
-import TextDestaque from "../components/home/destaque/TextDestaque";
 
 export default function Home() {
   return (
@@ -13,12 +12,7 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <div className=" relative content-center">
-          <SlideDestaque />
-        </div>
-        <div className="absolute inset-0 flex md:w-full md:h-full bg-black bg-opacity-50 items-center justify-center">
-          <TextDestaque />
-        </div>
+        <SlideDestaque />
       </main>
     </div>
   );

@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function TextDestaque() {
   return (
     <>
-      <div className="relative">
+      <div className="relative flex justify-center">
         <Image src="/home/destaque/frame.svg" width={822} height={213} />
       </div>
-      <div className="absolute tracking-wide text-center md:w-1/3 text-white">
+      <div className="absolute tracking-wide text-center md:w-1/3 text-black top-0">
         <h1 className=" font-bold font-Lobster tracking-widest text-5xl ">Agro Bahia Atacadista</h1>
         <p className="text-sm ">
           Nossa missão é oferecer produtos de extrema qualidade, visando atender
