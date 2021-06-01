@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import SlideDestaque from "../components/home/destaque/SlideDestaque";
+import HeroDestaque from "../components/home/destaque/HeroDestaque";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <SlideDestaque />
+        <HeroDestaque />
       </main>
     </div>
   );
