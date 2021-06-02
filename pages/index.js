@@ -16,12 +16,11 @@ export default function Home({ links }) {
       <main className="">
         <HeroDestaque className=" shadow-lg" />
       </main>
-      <div className="">
-        <LinksUteis links={links} />
-      </div>
-      <div className="">
+      
         <Team links={links} />
-      </div>
+        <LinksUteis links={links} />
+      
+      
       
     </div>
   );

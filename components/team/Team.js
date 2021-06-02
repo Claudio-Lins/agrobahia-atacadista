@@ -23,7 +23,7 @@ export default function Team({ team }) {
               <div className="p-6 tracking-wide text-gray-800">
                 <h3 className="text-3xl font-semibold">Yure Souza</h3>
                 <h4 className="mb-2 text-xs font-light">Software Engineer</h4>
-                <p className=" leading-5 font-light">Add team member description here. Remove the text if not necessary.</p>
+                <p className=" leading-5 text-sm font-light">Add team member description here. Remove the text if not necessary.</p>
               </div>
             </div>
             {/*  */}

@@ -4,7 +4,8 @@ import Image from "next/image";
 export default function LinksUteis({ links }) {
   return (
     <>
-      <div className=" container mx-auto py-24 bg-white shadow-inner">
+      <div className="py-24 bg-white shadow-inner">
+      <div className="container mx-auto ">
         <div className=" text-center font-bold text-5xl mb-4">
           <h2>Links Úteis</h2>
         </div>
@@ -20,6 +21,7 @@ export default function LinksUteis({ links }) {
                 src={links.logo.url}
                 width={120}
                 height={80}
+                objectFit="cover"
               />
             </div>
     
@@ -32,6 +34,7 @@ export default function LinksUteis({ links }) {
           </a>    
           ))}
         </div>
+      </div>
       </div>
     </>
   );
