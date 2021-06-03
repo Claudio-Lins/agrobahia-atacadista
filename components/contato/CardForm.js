@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
 
 export default function CardForm() {
@@ -8,9 +9,27 @@ export default function CardForm() {
     reset,
   } = useForm();
 
-  function onSubmitForm(values) {
-    console.log(values);
+  async function onSubmitForm(values) {
+    let config = {
+      method: "post",
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: values,
+    };
+
+    try {
+      const response = await axios(config);
+      if(response.status == 200){
+        reset();
+      }
+
+    } catch (err) {
+      console.error(err);
+    }
   }
+
   return (
     <>
       <div className="bg-gray-50 h-full w-[600px] flex justify-center items-center">
@@ -29,7 +48,8 @@ export default function CardForm() {
                 {...register("name", {
                   required: "Campo obrigatório",
                 })}
-                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.name ? 'bg-red-100 ring-2 ring-red-500' : null
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${
+                  errors.name ? "bg-red-100 ring-2 ring-red-500" : null
                 }`}
                 placeholder="Nome"
               />
@@ -46,8 +66,22 @@ export default function CardForm() {
                 type="text"
                 {...register("email", {
                   required: "Campo obrigatório",
+                  minLength: {
+                    value: 8,
+                    message:
+                      "Não tem caraxteres sufuciente para ser um email...",
+                  },
+                  maxLength: {
+                    value: 120,
+                    message: "Tem caraxteres demais para ser um email...",
+                  },
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Por favor, insira um email válido",
+                  },
                 })}
-                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.email ? 'bg-red-100 ring-2 ring-red-500' : null
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${
+                  errors.email ? "bg-red-100 ring-2 ring-red-500" : null
                 }`}
                 placeholder="Email"
               />
@@ -68,7 +102,8 @@ export default function CardForm() {
                   //   message: 'error message' // JS only: <p>error message</p> TS only support string
                   // }
                 })}
-                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.phone ? 'bg-red-100 ring-2 ring-red-500' : null
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${
+                  errors.phone ? "bg-red-100 ring-2 ring-red-500" : null
                 }`}
                 placeholder="Telefone"
               />
@@ -92,9 +127,10 @@ export default function CardForm() {
                   maxLength: {
                     value: 500,
                     message: "Sua mensagem tem mais de 500 letras...",
-                  }
+                  },
                 })}
-                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.message? 'bg-red-100 ring-2  ring-red-500' : null
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${
+                  errors.message ? "bg-red-100 ring-2  ring-red-500" : null
                 }`}
                 placeholder="Message"
               ></textarea>
