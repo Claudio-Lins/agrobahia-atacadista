@@ -1,10 +1,15 @@
 import { useForm } from "react-hook-form";
 
 export default function CardForm() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  
-  function onSubmitForm (values){
-    console.log(values)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  function onSubmitForm(values) {
+    console.log(values);
   }
   return (
     <>
@@ -24,11 +29,12 @@ export default function CardForm() {
                 {...register("name", {
                   required: "Campo obrigatório",
                 })}
-                className="block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-[#4b991d] focus:border-[#4b991d] border-gray-300 rounded-md focus:outline-none focus:ring-2"
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.name ? 'bg-red-100 ring-2 ring-red-500' : null
+                }`}
                 placeholder="Nome"
               />
-              <span className="text-red-400 text-sm py-2">
-              {errors.name && errors.name.message}
+              <span className="text-red-300 text-[12px] ml-4 py-2">
+                {errors.name && errors.name.message}
               </span>
             </div>
             <div>
@@ -41,11 +47,12 @@ export default function CardForm() {
                 {...register("email", {
                   required: "Campo obrigatório",
                 })}
-                className="block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-[#4b991d] focus:border-[#4b991d] border-gray-300 rounded-md focus:outline-none focus:ring-2"
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.email ? 'bg-red-100 ring-2 ring-red-500' : null
+                }`}
                 placeholder="Email"
               />
-              <span className="text-red-400 text-sm py-2">
-              {errors.email && errors.email.message}
+              <span className="text-red-300  text-[12px] ml-4 py-2">
+                {errors.email && errors.email.message}
               </span>
             </div>
             <div>
@@ -55,10 +62,19 @@ export default function CardForm() {
               <input
                 type="text"
                 name="phone"
-                {...register("phone")}
-                className="block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-[#4b991d] focus:border-[#4b991d] border-gray-300 rounded-md focus:outline-none focus:ring-2"
-                placeholder="Phone"
+                {...register("phone", {
+                  // min: {
+                  //   value: 12,
+                  //   message: 'error message' // JS only: <p>error message</p> TS only support string
+                  // }
+                })}
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.phone ? 'bg-red-100 ring-2 ring-red-500' : null
+                }`}
+                placeholder="Telefone"
               />
+              <span className="text-red-300  text-[12px] ml-4 py-2">
+                {errors.phone && errors.phone.message}
+              </span>
             </div>
             <div>
               <label for="message" className="sr-only">
@@ -68,13 +84,22 @@ export default function CardForm() {
                 name="message"
                 rows="4"
                 {...register("message", {
-                  required: "Campo obrigatório",
+                  required: "Campo obrigatório!",
+                  minLength: {
+                    value: 10,
+                    message: "Sua mensagem tem menos de 10 letras...",
+                  },
+                  maxLength: {
+                    value: 500,
+                    message: "Sua mensagem tem mais de 500 letras...",
+                  }
                 })}
-                className="block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-[#4b991d] focus:border-[#4b991d] border-gray-300 rounded-md focus:outline-none focus:ring-2"
+                className={`block w-full shadow py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md focus:outline-none focus:ring-2 ${ errors.message? 'bg-red-100 ring-2  ring-red-500' : null
+                }`}
                 placeholder="Message"
               ></textarea>
-              <span className="text-red-400 text-sm py-2">
-              {errors.message && errors.message.message}
+              <span className="text-red-300 text-[12px] ml-4 py-2">
+                {errors.message && errors.message.message}
               </span>
             </div>
             <div>
