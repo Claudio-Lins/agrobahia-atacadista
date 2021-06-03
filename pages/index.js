@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Contato from "../components/contato/Contato";
 import HeroDestaque from "../components/home/destaque/HeroDestaque";
 import LinksUteis from "../components/linksUteis/LinksUteis";
 import Team from '../components/team/Team'
@@ -19,6 +20,7 @@ export default function Home({ links }) {
       
         <Team links={links} />
         <LinksUteis links={links} />
+        <Contato />
       
       
       

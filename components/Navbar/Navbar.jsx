@@ -10,7 +10,7 @@ const Navbar = ({ toggle }) => {
           className="container mx-auto flex items-center justify-between md:justify-evenly h-24  relative"
           role="navigation"
         >
-          <Link href="/">
+          <Link href="/#destak">
             <a className="pl-6 md:pl-20">
               <Image
                 src="/home/Navbar/Agro-Bahia_H_Verde.svg"
@@ -23,7 +23,7 @@ const Navbar = ({ toggle }) => {
           <div className="pr-12 cursor-pointer md:hidden" onClick={toggle}>
             <Image
               src="/assets/menu-burger.svg"
-              alt="Menu Joanita Festa com Arte"
+              alt="Menu AgroBahia"
               width={25}
               height={25}
             />
@@ -39,12 +39,12 @@ const Navbar = ({ toggle }) => {
                 Nossos Produtos
               </a>
             </Link>
-            <Link href="/#links">
+            <Link href="/#uteis">
               <a className=" inline-block hover:text-green-900 hover:font-bold">
                 Links Úteis
               </a>
             </Link>
-            <Link href="/#equipe">
+            <Link href="/#team">
               <a className=" inline-block hover:text-green-900 hover:font-bold">
                 Equipe
               </a>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeroDestaque() {
   return (
-    <div className=" w-full relative">
+    <div id='destak' className=" w-full relative">
       <div className="w-full h-full bg-gray-800 absolute z-20 opacity-50 "></div>
 
       <div className="w-full h-full flex absolute justify-center items-center z-30">

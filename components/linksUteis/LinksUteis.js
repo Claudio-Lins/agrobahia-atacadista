@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function LinksUteis({ links }) {
   return (
     <>
-      <div className="py-24 bg-white shadow-inner">
+      <div id='uteis' className="py-24 bg-white shadow-inner">
       <div className="container mx-auto ">
         <div className=" text-center font-bold text-5xl mb-4">
           <h2>Links Úteis</h2>
