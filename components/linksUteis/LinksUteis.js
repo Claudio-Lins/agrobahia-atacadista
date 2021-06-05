@@ -18,7 +18,7 @@ export default function LinksUteis({ links }) {
             <div key={index} className="flex flex-col  bg-white shadow-md py-4 h-56 w-40 border">
             <div className="flex justify-center items">
               <Image
-                src={links.logo.url}
+                src={links.image.url}
                 width={120}
                 height={80}
                 objectFit="cover"
