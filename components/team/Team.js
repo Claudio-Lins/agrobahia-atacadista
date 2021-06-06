@@ -4,13 +4,16 @@ export default function Team({ team }) {
   return (
     <>
       <div id='team' className="bg-[#4b991d] flex flex-col py-12">
-      <div className=" text-center font-bold text-5xl text-white mb-8">
+      <div className=" text-center text-white font-bold md:text-5xl text-4xl mb-2">
           <h2>Equipe</h2>
+        </div>
+        <div className="flex flex-col md:mb-10 mb-6 mt-0">
+          <Image src="/uteis/folhas_white.svg" alt="" width={500} height={45} />
         </div>
         <div className="md:container mx-auto">
           <div className="md:flex md:justify-evenly">
               {/*  */}
-            <div className="w-72 bg-white shadow-lg">
+            <div className="w-72 bg-white shadow-lg mb-4">
               <div className="">
                 <Image
                   src="/team/team-01.jpg"
@@ -28,7 +31,7 @@ export default function Team({ team }) {
             </div>
             {/*  */}
               {/*  */}
-            <div className="w-72 bg-white shadow-lg">
+            <div className="w-72 bg-white shadow-lg mb-4">
               <div className="">
                 <Image
                   src="/team/team-01.jpg"

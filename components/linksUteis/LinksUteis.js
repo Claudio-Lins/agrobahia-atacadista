@@ -10,7 +10,7 @@ export default function LinksUteis({ links }) {
           <h2>Links Úteis</h2>
         </div>
         <div className="flex flex-col mb-6">
-          <Image src="/uteis/folhas.svg" alt="" width={44} height={26} />
+          <Image src="/uteis/folhas.svg" alt="" width={500} height={45} />
         </div>
         <div className="flex">
         <div className=" grid grid-cols-2 gap-4 mx-auto md:flex md:justify-evenly md:px-20">
