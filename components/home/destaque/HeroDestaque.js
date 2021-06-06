@@ -4,11 +4,18 @@ import Image from "next/image";
 export default function HeroDestaque() {
   return (
     <>
-      <div className="flex flex-col min-h-screen w-full justify-center items-center">
-        <div className="relative min-h-screen w-full">
+      <div className="flex flex-col w-full justify-center items-center">
+        <div className="relative w-full hidden md:block">
           <SlideDestaque />
         </div>
-        <div className="absolute z-30">
+        <div className="relative min-h-screen w-full md:hidden">
+        <Image
+              src="/home/destaque/destaque-01.jpg"
+              layout="fill"
+              objectFit="cover"
+            />
+        </div>
+        <div className="absolute z-30 text-white">
           <h1 className="text-3xl text-center">Agro Bahia Atacadista</h1>
           <p className="text-xs text-center ">
             Nossa missão é oferecer produtos de extrema qualidade, visando
@@ -21,5 +28,3 @@ export default function HeroDestaque() {
   );
 }
 
-{
-}

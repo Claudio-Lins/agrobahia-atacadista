@@ -18,7 +18,7 @@ export default function SlideDestaque() {
 
   return (
     <>
-      <div className="min-h-screen w-full">
+  
   
           <Fade {...fadeProperties}>
             <Image
@@ -57,9 +57,7 @@ export default function SlideDestaque() {
               objectFit="cover"
             />
           </Fade>
-        
 
-      </div>
     </>
   );
 }

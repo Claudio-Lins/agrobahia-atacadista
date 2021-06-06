@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Team({ team }) {
   return (
     <>
-      <div id='team' className="bg-[#4b991d] flex flex-col py-12">
+      <div id='team' className="bg-[#4b991d] flex flex-col py-12 mt-0">
       <div className=" text-center text-white font-bold md:text-5xl text-4xl mb-2">
           <h2>Equipe</h2>
         </div>
