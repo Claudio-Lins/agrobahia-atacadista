@@ -13,7 +13,7 @@ const Navbar = ({ toggle }) => {
           <Link href="/#destak">
             <a className="pl-6 md:pl-20">
               <Image
-                src="/home/Navbar/Agro-Bahia_H_Verde.svg"
+                src="/home/Navbar/Agro-Bahia_H_verde.svg"
                 alt="Joanita Festa com Arte"
                 width={160}
                 height={55}
