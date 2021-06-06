@@ -14,7 +14,6 @@ export default function Home({ links }) {
       </Head>
 
       <HeroDestaque />
-
       <Team links={links} />
       <LinksUteis links={links} />
       <Contato />

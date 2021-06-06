@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Team({ team }) {
   return (
     <>
-      <div id='team' className="bg-[#4b991d] py-24">
+      <div id='team' className="bg-[#4b991d] flex flex-col py-12">
       <div className=" text-center font-bold text-5xl text-white mb-8">
           <h2>Equipe</h2>
         </div>
-        <div className=" container mx-auto">
-          <div className="flex justify-evenly">
+        <div className="md:container mx-auto">
+          <div className="md:flex md:justify-evenly">
               {/*  */}
             <div className="w-72 bg-white shadow-lg">
               <div className="">

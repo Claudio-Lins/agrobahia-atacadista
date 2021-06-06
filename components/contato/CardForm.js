@@ -32,8 +32,8 @@ export default function CardForm() {
 
   return (
     <>
-      <div className="bg-gray-50 h-full w-[600px] flex justify-center items-center">
-        <div className="bg-white w-full p-8 shadow">
+      <div className="bg-gray-50  md:h-[575px] w-11/12 flex justify-center items-center mx-auto">
+        <div className="w-full p-8 shadow">
           <form
             onSubmit={handleSubmit(onSubmitForm)}
             className="grid grid-cols-1 gap-y-6"
