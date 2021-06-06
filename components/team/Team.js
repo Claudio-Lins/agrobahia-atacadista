@@ -8,7 +8,7 @@ export default function Team({ team }) {
           <h2>Equipe</h2>
         </div>
         <div className="flex flex-col md:mb-10 mb-6 mt-0">
-          <Image src="/uteis/folhas_white.svg" alt="" width={500} height={45} />
+          <Image src="/uteis/folhas_white.svg" alt="" width={500} height={45} />  
         </div>
         <div className="md:container mx-auto">
           <div className="md:flex md:justify-evenly">

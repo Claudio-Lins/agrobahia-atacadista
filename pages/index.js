@@ -8,13 +8,13 @@ import { fetchAPIAgroBahia } from "../lib/api";
 
 export default function Home({ links }) {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>AgroBahia Atacadista</title>
       </Head>
 
       <HeroDestaque />
-      <Team links={links} />
+      <Team links={links} />  
       <LinksUteis links={links} />
       <Contato />
     </div>
