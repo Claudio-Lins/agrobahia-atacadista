@@ -16,9 +16,9 @@ export default function LinksUteis({ links }) {
           {links.map((links, index) => (
             <a href={links.link} target="_blank">
             <div key={index} className="flex flex-col  bg-white shadow-md py-4 h-56 w-40 border">
-            <div className="flex justify-center items">
+            <div className="flex justify-center items-center mb-2">
               <Image
-                src={links.image.url}
+                src={links.logo.url}
                 alt={links.name}
                 width={120}
                 height={80}
@@ -26,9 +26,9 @@ export default function LinksUteis({ links }) {
               />
             </div>
     
-            <div className="flex flex-col justify-center items-center h-full">
-              <div className="text-sm text-center flex items-center justify-center">
-                <p>{links.name}</p>
+            <div className="flex flex-col justify-center items-center h-full px-4 bg-red-600 mt-4">
+              <div className="text-sm text-center flex items-center justify-center bg-blue-600">
+                <p className="">{links.name}</p>
               </div>
             </div>
           </div>
