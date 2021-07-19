@@ -16,7 +16,7 @@ export default function HeroDestaque() {
             />
         </div>
         <div className="absolute z-30 text-white">
-          <h1 className="text-3xl text-center">Agro Bahia Atacadista</h1>
+          <h1 className="text-3xl text-center">AgroBahia Atacadista</h1>
           <p className="text-xs text-center ">
             Nossa missão é oferecer produtos de extrema qualidade, visando
             atender a demanda nacional e internacional e contribuir cada vez
